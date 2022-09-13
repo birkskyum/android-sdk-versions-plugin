@@ -1,5 +1,4 @@
 apply plugin: 'maven-publish'
-apply plugin: 'com.mapbox.sdkRegistry'
 apply from: file('./gradle/artifact-settings.gradle')
 
 version = project.ext.versionName
@@ -38,14 +37,4 @@ publishing {
             }
         }
     }
-}
-
-registry {
-    sdkName = project.ext.mapboxRegistrySdkName
-    production = true
-    snapshot = project.ext.versionName.endsWith("-SNAPSHOT")
-    override = snapshot ? true : false
-    dryRun = false
-    publish = true
-    publications = ['mavenJava']
 }

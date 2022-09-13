@@ -1,5 +1,6 @@
 The MIT License (MIT)
 
+Copyright (c) 2022 MapLibre Contributors
 Copyright (c) 2019 Mapbox
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -5,8 +5,7 @@ ext {
     ]
 
     pluginVersion = [
-            checkstyle: '8.4',
-            mapboxSdkRegistry : '0.4.0',
+            checkstyle: '8.4'
     ]
 
     dependenciesList = [
@@ -16,8 +15,7 @@ ext {
     ]
 
     pluginDependencies = [
-            checkstyle: "com.puppycrawl.tools:checkstyle:${pluginVersion.checkstyle}",
-            mapboxSdkRegistry: "com.mapbox.gradle.plugins:sdk-registry:${pluginVersion.mapboxSdkRegistry}",
+            checkstyle: "com.puppycrawl.tools:checkstyle:${pluginVersion.checkstyle}"
     ]
 
 }

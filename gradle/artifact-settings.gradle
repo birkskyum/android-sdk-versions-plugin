@@ -1,13 +1,13 @@
 ext {
-    mapboxArtifactGroupId = 'com.mapbox.mapboxsdk'
+    mapboxArtifactGroupId = 'org.maplibre.gl'
     mapboxArtifactId = project.property('POM_ARTIFACT_ID')
     mapboxArtifactTitle = project.property('POM_ARTIFACT_TITLE')
     mapboxArtifactDescription = project.property('POM_DESCRIPTION')
-    mapboxDeveloperName = 'Mapbox'
-    mapboxDeveloperId = 'mapbox'
-    mapboxArtifactUrl = 'https://github.com/mapbox/android-sdk-versions-plugin'
-    mapboxArtifactVcsUrl = 'https://github.com/mapbox/android-sdk-versions-plugin.git'
-    mapboxArtifactScmUrl = 'scm:git@github.com:mapbox/android-sdk-versions-plugin.git'
+    mapboxDeveloperName = 'MapLibre'
+    mapboxDeveloperId = 'maplibre'
+    mapboxArtifactUrl = 'https://github.com/maplibre/android-sdk-versions-plugin'
+    mapboxArtifactVcsUrl = 'https://github.com/maplibre/android-sdk-versions-plugin.git'
+    mapboxArtifactScmUrl = 'scm:git@github.com:maplibre/android-sdk-versions-plugin.git'
     mapboxArtifactLicenseName = 'MIT'
     mapboxArtifactLicenseUrl = 'https://mit-license.org'
     versionName = project.property('VERSION_NAME')

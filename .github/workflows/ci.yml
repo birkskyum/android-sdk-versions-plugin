@@ -2,12 +2,12 @@ name: ci
 
 on: 
   workflow_dispatch:
-  push:
+  pull_request:
     tags-ignore:
       - '**'
     paths-ignore:
       - ".github/**" 
-      - "README.md"
+      - "**.md"
       - ".gitignore"      
     branches:
       - main

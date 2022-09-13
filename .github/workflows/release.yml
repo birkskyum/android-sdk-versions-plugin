@@ -33,11 +33,6 @@ jobs:
 
       - name: Build test plugin
         run: make release
-
-      - name: Publish to Maven Central and Mapbox SDK registry
-        run: make publish
-        run: make publish-sdk-registry
-
       # - name: Prepare MavenCentral release
       #   env:
       #     GPG_KEY_CONTENTS: ${{ secrets.GPG_KEY_CONTENTS }}

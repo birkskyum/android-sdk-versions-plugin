@@ -16,10 +16,6 @@ buildscript {
 
     dependencies {
         apply from: "${rootDir}/gradle/dependencies.gradle"
-
-        if (SDK_REGISTRY == 'true') {
-            classpath pluginDependencies.mapboxSdkRegistry
-        }
     }
 }
 

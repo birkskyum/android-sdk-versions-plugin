@@ -39,20 +39,20 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-          server-id: ossrh
-          server-username: MAVEN_USERNAME
-          server-password: MAVEN_PASSWORD
+          # server-id: ossrh
+          # server-username: MAVEN_USERNAME
+          # server-password: MAVEN_PASSWORD
 
       - name: Set up Maven
         uses: stCarolas/setup-maven@v4.4
         with:
           maven-version: 3.8.2
 
-      - name: Publish to the Maven Central Repository
-        run: mvn --batch-mode deploy
-        env:
-          MAVEN_USERNAME: ${{ secrets.NEXUS_USERNAME_TOKEN }}
-          MAVEN_PASSWORD: ${{ secrets.NEXUS_PASSWORD_TOKEN }}
+      # - name: Publish to the Maven Central Repository
+      #   run: mvn --batch-mode deploy
+      #   env:
+      #     MAVEN_USERNAME: ${{ secrets.NEXUS_USERNAME_TOKEN }}
+      #     MAVEN_PASSWORD: ${{ secrets.NEXUS_PASSWORD_TOKEN }}
 
       # - name: Set up Java for publishing to GitHub Packages
       #   uses: actions/setup-java@v3
@@ -72,10 +72,10 @@ jobs:
       #     echo "${GPG_KEY_CONTENTS}" | base64 -d > signing-key.gpg
       #   shell: bash
 
-      # - name: Publish to MavenCentral
-      #   run: make publish
-      #   env:
-      #     NEXUS_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-      #     NEXUS_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-      #     signing.keyId: ${{ secrets.SIGNING_KEY_ID }}
-      #     signing.password: ${{ secrets.SIGNING_PASSWORD }}
+      - name: Publish to MavenCentral
+        run: make publish
+        env:
+          NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME_TOKEN }}
+          NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD_TOKEN }}
+          signing.keyId: ${{ secrets.SIGNING_KEY_ID }}
+          signing.password: ${{ secrets.SIGNING_PASSWORD }}
